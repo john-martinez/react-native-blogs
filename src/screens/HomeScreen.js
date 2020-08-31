@@ -22,10 +22,6 @@ const HomeScreen = ({ navigation }) => {
   return (
     <>
       <Text>HomeScreen</Text>
-      <Button 
-        title="click me"
-        onPress={()=> addBlogPost({title: 'jor', message: 'gago ka'}) } 
-      />
       <FlatList 
         data={ data }
         keyExtractor={ (_,index) => index.toString() }
