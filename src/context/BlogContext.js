@@ -9,12 +9,12 @@ const BlogReducer = (state, action) => {
 }
 
 const addBlogPost = dispatch => {
-  return () => dispatch({
+  return (title, message) => dispatch({
     type: 'ADD_BLOGPOST',
     payload: {
       id: Math.floor(Math.random() * 99999),
-      title: 'new title ni jor',
-      message: 'I love you baby'
+      title,
+      message
     }
   })
 }
