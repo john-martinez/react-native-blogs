@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, TextInput, StyleSheet } from 'react-native';
 import { Context } from '../context/BlogContext';
 
 const EditScreen = ({ route }) => {
@@ -7,7 +7,7 @@ const EditScreen = ({ route }) => {
   const blogPost = data.find( blog => blog.id === route.params.id);
   
   return <View>
-    <Text>Edit Screen</Text>
+    <TextInput>Edit Screen</TextInput>
   </View>
 }
 

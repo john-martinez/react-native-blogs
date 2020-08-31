@@ -16,8 +16,8 @@ const ShowScreen = ({ navigation, route }) => {
         </TouchableOpacity>
       }
     })
-  })
-  
+  }, [navigation, route])
+
   return <View>
     <Text>{ blogPost.title }</Text>
     <Text>{ blogPost.message }</Text>
