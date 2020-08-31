@@ -1,11 +1,23 @@
 import React, { useContext } from 'react';
 import { View, Text, Button, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { Context } from '../context/BlogContext';
+import { AntDesign } from '@expo/vector-icons'; 
 import { Feather } from '@expo/vector-icons'; 
 
 
 const HomeScreen = ({ navigation }) => {
   const { data, addBlogPost, deleteBlogPost } = useContext(Context);
+
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerTitle: "Blog Posts",
+      headerRight: () => {
+        return <TouchableOpacity onPress={ ()=> navigation.navigate('Create') } >
+          <AntDesign name="plus" style={{ fontSize: 30, marginRight: 10 }}/>
+        </TouchableOpacity>
+      } 
+    })
+  })
   
   return (
     <>
